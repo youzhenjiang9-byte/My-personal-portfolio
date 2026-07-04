@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const navItems = [
@@ -48,13 +49,22 @@ export default function Navbar() {
             : "border-white/10 bg-black/25 backdrop-blur-md"
         }`}
       >
+        {/* Avatar */}
         <button
           onClick={() => scrollToSection("home")}
-          className="flex h-9 w-9 items-center justify-center rounded-xl bg-lime-400 text-black"
+          className="overflow-hidden rounded-xl transition hover:scale-105"
         >
-          ●
+          <Image
+            src="/images/avatar.png"
+            alt="Avatar"
+            width={40}
+            height={40}
+            className="h-10 w-10 rounded-xl object-cover"
+            priority
+          />
         </button>
 
+        {/* Navigation */}
         <nav className="flex gap-10 text-sm">
           {navItems.map((item) => (
             <button
@@ -69,6 +79,7 @@ export default function Navbar() {
           ))}
         </nav>
 
+        {/* Button */}
         <button
           onClick={() => scrollToSection("contact")}
           className="rounded-full bg-white px-6 py-2 text-sm text-black transition duration-300 hover:scale-105"
