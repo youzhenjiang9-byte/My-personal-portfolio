@@ -4,10 +4,26 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 
 const slides = [
-  { type: "image", src: "/images/landing/landing01.png" },
-  { type: "video", src: "/videos/landing/landing01.mp4" },
-  { type: "image", src: "/images/landing/landing02.png" },
-  { type: "image", src: "/images/landing/landing03.png" },
+  {
+    type: "image",
+    src: "/videos/landing/landing01.png",
+  },
+  {
+    type: "video",
+    src: "/videos/landing/landing01.mp4",
+  },
+  {
+    type: "image",
+    src: "/videos/landing/landing02.png",
+  },
+  {
+    type: "image",
+    src: "/videos/landing/landing03.png",
+  },
+  {
+    type: "image",
+    src: "/videos/landing/landing04.png",
+  },
 ];
 
 export default function LandingHero() {
@@ -83,7 +99,7 @@ export default function LandingHero() {
 
       <div className="relative z-10 h-full px-8 pt-24">
         <motion.h1
-          initial={{ opacity: 0, x: -80, filter: "blur(15px)" }}
+          initial={{ opacity: 0, x: -80, filter: "blur(12px)" }}
           animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
           transition={{ duration: 1 }}
           className="title-hero text-white/45"
