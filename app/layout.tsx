@@ -8,8 +8,8 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Creative Portfolio",
-  description: "AI Creative Portfolio",
+  title: "L2B. — Creative Portfolio",
+  description: "AI creative portfolio exploring design, motion, visual systems and storytelling.",
 };
 
 export default function RootLayout({
