@@ -4,32 +4,15 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 
 const slides = [
-  {
-    type: "image",
-    src: "/videos/landing/landing01.png",
-  },
-  {
-    type: "video",
-    src: "/videos/landing/landing01.mp4",
-  },
-  {
-    type: "image",
-    src: "/videos/landing/landing02.png",
-  },
-  {
-    type: "image",
-    src: "/videos/landing/landing03.png",
-  },
-  {
-    type: "image",
-    src: "/videos/landing/landing04.png",
-  },
+  { type: "image", src: "/videos/landing/landing01.png" },
+  { type: "video", src: "/videos/landing/landing01.mp4" },
+  { type: "image", src: "/videos/landing/landing02.png" },
+  { type: "image", src: "/videos/landing/landing03.png" },
+  { type: "image", src: "/videos/landing/landing04.png" },
 ];
 
 export default function LandingHero() {
   const [index, setIndex] = useState(0);
-  const [mouse, setMouse] = useState({ x: 0, y: 0 });
-
   const current = slides[index];
 
   useEffect(() => {
@@ -40,38 +23,15 @@ export default function LandingHero() {
     return () => clearInterval(timer);
   }, []);
 
-  const handleMouseMove = (e: React.MouseEvent<HTMLElement>) => {
-    const x = (e.clientX / window.innerWidth - 0.5) * 24;
-    const y = (e.clientY / window.innerHeight - 0.5) * 24;
-    setMouse({ x, y });
-  };
-
   return (
-    <section
-      onMouseMove={handleMouseMove}
-      className="relative h-screen overflow-hidden bg-black text-white"
-    >
+    <section className="relative h-screen overflow-hidden bg-black text-white">
       <AnimatePresence mode="wait">
         <motion.div
           key={current.src}
-          initial={{ opacity: 0, scale: 1.1 }}
-          animate={{
-            opacity: 1,
-            scale: [1.04, 1.08, 1.04],
-            x: mouse.x,
-            y: mouse.y,
-          }}
-          exit={{ opacity: 0, scale: 1.08 }}
-          transition={{
-            opacity: { duration: 1.2, ease: "easeOut" },
-            scale: {
-              duration: 8,
-              repeat: Infinity,
-              ease: "easeInOut",
-            },
-            x: { duration: 0.6, ease: "easeOut" },
-            y: { duration: 0.6, ease: "easeOut" },
-          }}
+          initial={{ opacity: 0, scale: 1.06 }}
+          animate={{ opacity: 1, scale: 1.03 }}
+          exit={{ opacity: 0, scale: 1.06 }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
           className="absolute inset-0"
         >
           {current.type === "video" ? (
@@ -81,21 +41,21 @@ export default function LandingHero() {
               muted
               loop
               playsInline
-              className="h-full w-full object-cover opacity-80"
+              className="h-full w-full object-cover opacity-100"
             />
           ) : (
             <img
               src={current.src}
               alt=""
-              className="h-full w-full object-cover opacity-80"
+              className="h-full w-full object-cover opacity-100"
             />
           )}
         </motion.div>
       </AnimatePresence>
 
-      <div className="absolute inset-0 bg-black/45" />
-      <div className="absolute inset-0 bg-gradient-to-r from-black via-black/10 to-black/75" />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20" />
+      <div className="absolute inset-0 bg-black/25" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/10 to-black/45" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-black/10" />
 
       <div className="relative z-10 h-full px-8 pt-24">
         <motion.h1
