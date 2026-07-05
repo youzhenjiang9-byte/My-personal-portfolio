@@ -9,10 +9,12 @@ import Marquee from "@/components/Marquee";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Works from "@/components/Works";
+import ClickEffect from "@/components/ClickEffect";
 
 export default function Home() {
   return (
     <main className="min-h-screen overflow-x-hidden bg-black text-white">
+      <ClickEffect />
       <Navbar />
 
       {/* 首页 */}
