@@ -64,7 +64,8 @@ export default function LandingHero() {
           initial={{ opacity: 0, x: -80, filter: "blur(12px)" }}
           animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
           transition={{ duration: 1 }}
-          className="flex items-start tracking-[-0.08em] text-[10vw] font-black leading-none text-white/35"
+          className="flex items-start tracking-[0
+        em] text-[10vw] font-black leading-none text-white/35"
         >
           <span>DESIGN</span>
 
@@ -77,7 +78,7 @@ export default function LandingHero() {
         <motion.p
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.5 }}
+          transition={{ delay: 1 }}
           className="absolute left-[24%] top-[31%] text-xl font-semibold tracking-tight text-white/35"
         >
           Tochuan Design
