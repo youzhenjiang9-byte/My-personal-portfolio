@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 
 const images = [
-  const images = [
   {
     src: "/images/Marquee/marquee01.png",
     className: "left-[4%] top-[16%] w-[190px]",
