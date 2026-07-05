@@ -68,7 +68,7 @@ export default function LandingHero() {
         <sup className="pt-2 text-[4vw] leading-none">®</sup>
         </motion.h1>
 
-        <p className="absolute left-[35%] top-[28%] text-2xl font-bold tracking-[-0.04em] text-white/55">
+        <p className="absolute left-[25%] top-[28%] text-2xl font-bold tracking-[-0.04em] text-white/55">
           Tochuan Design
         </p>
 
