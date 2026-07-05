@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://tochuan.cn"),
@@ -22,13 +23,7 @@ export const metadata: Metadata = {
     "AI Designer",
   ],
 
-  authors: [
-    {
-      name: "Tochuan",
-      url: "https://tochuan.cn",
-    },
-  ],
-
+  authors: [{ name: "Tochuan", url: "https://tochuan.cn" }],
   creator: "Tochuan",
 
   openGraph: {
@@ -39,7 +34,6 @@ export const metadata: Metadata = {
     siteName: "Tochuan.",
     locale: "zh_CN",
     type: "website",
-
     images: [
       {
         url: "/images/og.png",
@@ -53,9 +47,19 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Tochuan.",
-    description:
-      "Creative Designer & AI Explorer.",
+    description: "Creative Designer & AI Explorer.",
     images: ["/images/og.png"],
-    creator: "@Tochuan",
   },
 };
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="zh-CN">
+      <body>{children}</body>
+    </html>
+  );
+}
