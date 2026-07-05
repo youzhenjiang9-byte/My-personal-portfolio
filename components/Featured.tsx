@@ -2,60 +2,93 @@
 
 import { motion } from "framer-motion";
 
-const images = [
-  {
-    src: "/images/featured/featured01.png",
-    className: "left-[4%] top-[16%] w-[230px]",
-  },
-  {
-    src: "/images/featured/featured02.png",
-    className: "right-[12%] top-[18%] w-[420px]",
-  },
-  {
-    src: "/images/featured/featured03.png",
-    className: "left-[18%] bottom-[12%] w-[520px]",
-  },
-  {
-    src: "/images/featured/featured04.png",
-    className: "right-[7%] bottom-[18%] w-[300px]",
-  },
-];
-
 export default function Featured() {
   return (
-    <section className="relative min-h-screen overflow-hidden bg-black px-8 py-36 text-white">
-      {images.map((item, index) => (
-        <motion.img
-          key={item.src}
-          src={item.src}
-          alt=""
-          initial={{ opacity: 0, y: 60, scale: 0.96 }}
-          whileInView={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ delay: index * 0.12, duration: 0.9 }}
+    <section className="bg-black px-8 py-36 text-white">
+      <div className="mx-auto max-w-7xl">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className={`absolute rounded-[2px] object-cover ${item.className}`}
-        />
-      ))}
+          className="mb-20 flex items-end justify-between"
+        >
+          <div>
+            <p className="mb-6 text-base font-medium tracking-normal text-white">
+              05 / FEATURED
+            </p>
 
-      <motion.div
-        initial={{ opacity: 0, y: 40, filter: "blur(10px)" }}
-        whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true }}
-        className="relative z-10 flex min-h-screen items-center justify-center"
-      >
-        <h2 className="text-center text-[clamp(56px,7vw,120px)] font-semibold leading-[0.9] tracking-[-0.08em]">
-          EVERY<span className="text-lime-400">T</span>HING
-          <br />
-          TO{" "}
-          <span className="inline-flex h-[0.8em] min-w-[1.5em] items-center justify-center rounded-full bg-lime-400 px-8 text-black">
-            →
-          </span>{" "}
-          CREA<span className="text-pink-300">T</span>E
-          <br />
-          ANYTHI<span className="text-lime-400">N</span>G
-        </h2>
-      </motion.div>
+            <h2 className="title-xl">
+              FEATURED
+              <br />
+              <span className="text-lime-400">PROJECTS</span>
+            </h2>
+          </div>
+
+          <p className="max-w-sm text-right text-white/45">
+            Recent selected works and experimental visual projects.
+          </p>
+        </motion.div>
+
+        <motion.div
+          whileHover={{ y: -8 }}
+          transition={{ duration: 0.35 }}
+          className="group cursor-pointer"
+        >
+          <div className="overflow-hidden rounded-[40px]">
+            <img
+              src="/images/featured/featured01.png"
+              alt=""
+              className="h-[620px] w-full object-cover transition duration-700 group-hover:scale-105"
+            />
+          </div>
+
+          <div className="mt-7 flex items-center justify-between">
+            <div>
+              <h3 className="text-4xl font-black">Creative AI Experience</h3>
+              <p className="mt-2 text-white/45">
+                Brand · Visual · AI · Motion
+              </p>
+            </div>
+
+            <span className="text-white/30">2025</span>
+          </div>
+        </motion.div>
+
+        <div className="mt-16 grid gap-8 md:grid-cols-2">
+          {[
+            {
+              image: "/images/featured/featured02.png",
+              title: "Brand Design",
+            },
+            {
+              image: "/images/featured/featured03.png",
+              title: "Motion Visual",
+            },
+          ].map((item) => (
+            <motion.div
+              key={item.title}
+              whileHover={{ y: -8 }}
+              transition={{ duration: 0.35 }}
+              className="group cursor-pointer"
+            >
+              <div className="overflow-hidden rounded-[34px]">
+                <img
+                  src={item.image}
+                  alt=""
+                  className="h-[420px] w-full object-cover transition duration-700 group-hover:scale-105"
+                />
+              </div>
+
+              <h3 className="mt-6 text-3xl font-bold">{item.title}</h3>
+
+              <p className="mt-2 text-white/45">
+                Experimental Visual Project
+              </p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
     </section>
   );
 }
