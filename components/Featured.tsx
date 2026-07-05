@@ -16,6 +16,7 @@ export default function Featured() {
         >
           <div>
             <p className="mb-6 text-base font-medium tracking-normal text-white">
+              05 / FEATURED
             </p>
 
             <h2 className="title-xl">
