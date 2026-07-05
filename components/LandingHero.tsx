@@ -62,14 +62,14 @@ export default function LandingHero() {
           initial={{ opacity: 0, x: -80, filter: "blur(12px)" }}
           animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
           transition={{ duration: 1 }}
-          className="title-hero text-white/45"
+          className="title-hero flex items-start gap-4 text-white/45"
         >
-          DESIGN
-          <sup className="ml-5 align-top text-[7vw]">®</sup>
+        <span>DESIGN</span>
+        <sup className="pt-2 text-[4vw] leading-none">®</sup>
         </motion.h1>
 
-        <p className="absolute left-[42%] top-[28%] text-2xl font-bold tracking-[-0.04em] text-white/55">
-          CREATIVE.LQB
+        <p className="absolute left-[35%] top-[28%] text-2xl font-bold tracking-[-0.04em] text-white/55">
+          Tochuan Design
         </p>
 
         <div className="absolute right-8 top-24 text-4xl text-white/55">
