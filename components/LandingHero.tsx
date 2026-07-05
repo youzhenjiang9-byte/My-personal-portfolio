@@ -64,8 +64,7 @@ export default function LandingHero() {
           initial={{ opacity: 0, x: -80, filter: "blur(12px)" }}
           animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
           transition={{ duration: 1 }}
-          className="flex items-start tracking-[0
-        em] text-[10vw] font-black leading-none text-white/35"
+          className="flex items-start tracking-[0em] text-[10vw] font-black leading-none text-white/35"
         >
           <span>DESIGN</span>
 
