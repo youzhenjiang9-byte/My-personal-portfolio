@@ -64,7 +64,7 @@ export default function LandingHero() {
           initial={{ opacity: 0, x: -80, filter: "blur(12px)" }}
           animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
           transition={{ duration: 1 }}
-          className="flex items-start tracking-[-0.05em] text-[9vw] font-black leading-none text-white/35"
+          className="flex items-start tracking-[-0.05em] text-[vw] font-black leading-none text-white/35"
         >
           <span>DESIGN</span>
 
@@ -75,17 +75,17 @@ export default function LandingHero() {
 
         {/* Brand */}
         <motion.p
-  initial={{ opacity: 0, x: -40 }}
-  animate={{ opacity: 1, x: 0 }}
-  transition={{
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{
     delay: 0.8,
     duration: 1.4,
     ease: [0.22, 1, 0.36, 1],
   }}
-  className="absolute left-[24%] top-[31%] text-xl font-semibold tracking-tight text-white/35"
->
-  Tochuan Design
-</motion.p>
+          className="absolute left-[24%] top-[31%] text-xl font-semibold tracking-tight text-white/35"
+        >
+          Tochuan Design
+        </motion.p>
 
         {/* Right Top */}
         <div className="absolute right-8 top-24 text-4xl text-white/55">
