@@ -78,7 +78,7 @@ export default function LandingHero() {
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.5 }}
-          className="absolute left-[24%] top-[31%] text-xl font-semibold tracking-tight text-white/60"
+          className="absolute left-[24%] top-[31%] text-xl font-semibold tracking-tight text-white/35"
         >
           Tochuan Design
         </motion.p>
