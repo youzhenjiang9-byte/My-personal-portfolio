@@ -15,8 +15,7 @@ export default function Featured() {
           className="mb-20 flex items-end justify-between"
         >
           <div>
-            <p className="mb-5 text-sm tracking-[0.3em] text-white/35">
-              05 / FEATURED
+            <p className="mb-6 text-base font-medium tracking-normal text-white">
             </p>
 
             <h2 className="title-xl">

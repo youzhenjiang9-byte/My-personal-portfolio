@@ -22,10 +22,9 @@ export default function About() {
           viewport={{ once: true }}
           className="col-span-7"
         >
-          <p className="mb-8 text-sm tracking-[0.35em] text-white/35">
-            04 / ABOUT ME
-          </p>
-
+          <p className="mb-6 text-base font-medium tracking-normal text-white">
+  04 / ABOUT ME
+</p>
           <h2 className="title-xl">
             DESIGN
             <br />
