@@ -47,8 +47,8 @@ function FloatingImage({
   smoothX: MotionValue<number>;
   smoothY: MotionValue<number>;
 }) {
-  const smoothX = useSpring(mouseX, { stiffness: 45, damping: 18 });
-const smoothY = useSpring(mouseY, { stiffness: 45, damping: 18 });
+  const x = useTransform(smoothX, [-0.5, 0.5], [-item.depth, item.depth]);
+  const y = useTransform(smoothY, [-0.5, 0.5], [-item.depth, item.depth]);
 
   return (
     <motion.div style={{ x, y }} className={`absolute z-10 ${item.className}`}>
@@ -74,8 +74,8 @@ export default function Marquee() {
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
 
-  const smoothX = useSpring(mouseX, { stiffness: 70, damping: 22 });
-  const smoothY = useSpring(mouseY, { stiffness: 70, damping: 22 });
+ const smoothX = useSpring(mouseX, { stiffness: 45, damping: 18 });
+const smoothY = useSpring(mouseY, { stiffness: 45, damping: 18 });
 
   const handleMouseMove = (e: React.MouseEvent<HTMLElement>) => {
     mouseX.set(e.clientX / window.innerWidth - 0.5);
