@@ -69,9 +69,9 @@ export default function LandingHero() {
         </motion.h1>
 
         <div className="absolute left-[22%] top-[29%]">
-  <p className="text-sm uppercase tracking-[0.35em] text-white/55">
-    TOCHUAN DESIGN
-  </p>
+  <span className="text-2xl font-semibold tracking-tight text-white/70">
+    Tochuan Design
+  </span>
 </div>
         <div className="absolute right-8 top-24 text-4xl text-white/55">
           Create
