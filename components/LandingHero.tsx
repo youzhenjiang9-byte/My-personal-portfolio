@@ -82,7 +82,7 @@ export default function LandingHero() {
     duration: 1.4,
     ease: [0.22, 1, 0.36, 1],
   }}
-  className="absolute left-[24%] top-[31%] text-xl font-semibold tracking-tight text-white/60"
+  className="absolute left-[24%] top-[31%] text-xl font-semibold tracking-tight text-white/35"
 >
   Tochuan Design
 </motion.p>
