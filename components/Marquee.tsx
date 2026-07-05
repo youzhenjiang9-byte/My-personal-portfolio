@@ -9,11 +9,31 @@ import {
 } from "framer-motion";
 
 const images = [
-  { src: "/images/Marquee/marquee01.png", className: "left-[4%] top-[16%] w-[190px]", depth: 14 },
-  { src: "/images/Marquee/marquee02.png", className: "right-[18%] top-[18%] w-[350px]", depth: -18 },
-  { src: "/images/Marquee/marquee03.png", className: "left-[18%] bottom-[10%] w-[440px]", depth: 22 },
-  { src: "/images/Marquee/marquee04.png", className: "right-[5%] bottom-[16%] w-[250px]", depth: -16 },
-  { src: "/images/Marquee/marquee05.png", className: "right-[36%] bottom-[7%] w-[220px]", depth: 12 },
+  {
+    src: "/images/Marquee/marquee01.png",
+    className: "left-[4%] top-[16%] w-[250px] rotate-[-3deg]",
+    depth: 36,
+  },
+  {
+    src: "/images/Marquee/marquee02.png",
+    className: "right-[10%] top-[14%] w-[360px] rotate-[7deg]",
+    depth: -52,
+  },
+  {
+    src: "/images/Marquee/marquee03.png",
+    className: "left-[9%] bottom-[6%] w-[520px] rotate-[-7deg]",
+    depth: 64,
+  },
+  {
+    src: "/images/Marquee/marquee04.png",
+    className: "right-[6%] bottom-[9%] w-[330px] rotate-[6deg]",
+    depth: -46,
+  },
+  {
+    src: "/images/Marquee/marquee05.png",
+    className: "right-[33%] bottom-[5%] w-[260px] rotate-[4deg]",
+    depth: 42,
+  },
 ];
 
 function FloatingImage({
@@ -54,8 +74,8 @@ export default function Marquee() {
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
 
-  const smoothX = useSpring(mouseX, { stiffness: 70, damping: 22 });
-  const smoothY = useSpring(mouseY, { stiffness: 70, damping: 22 });
+  const smoothX = useSpring(mouseX, { stiffness: 45, damping: 18 });
+const smoothY = useSpring(mouseY, { stiffness: 45, damping: 18 });
 
   const handleMouseMove = (e: React.MouseEvent<HTMLElement>) => {
     mouseX.set(e.clientX / window.innerWidth - 0.5);
@@ -101,7 +121,7 @@ export default function Marquee() {
               duration: 0.75,
               ease: [0.22, 1, 0.36, 1],
             }}
-            whileHover={{ scale: 1.025 }}
+            whileHover={{ scale: 1.12, rotate: 0 }}
             className="origin-center"
           >
             {line}
