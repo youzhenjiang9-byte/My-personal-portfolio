@@ -27,10 +27,7 @@ export default function Navbar() {
   const scrollToSection = (target: string) => {
     const section = document.getElementById(target);
 
-    if (!section) {
-      console.log("找不到 section:", target);
-      return;
-    }
+    if (!section) return;
 
     setActive(target);
 
@@ -46,32 +43,34 @@ export default function Navbar() {
         className={`mx-auto flex h-14 max-w-6xl items-center justify-between rounded-full border px-5 transition-all duration-500 ${
           scrolled
             ? "border-white/10 bg-black/70 shadow-[0_20px_80px_rgba(0,0,0,0.45)] backdrop-blur-2xl"
-            : "border-white/10 bg-black/25 backdrop-blur-md"
+            : "border-white/10 bg-black/25 backdrop-blur-xl"
         }`}
       >
-        {/* Avatar */}
+        {/* Logo */}
         <button
           onClick={() => scrollToSection("home")}
-          className="overflow-hidden rounded-xl transition hover:scale-105"
+          className="overflow-hidden rounded-xl transition duration-300 hover:scale-105 active:scale-95"
         >
           <Image
             src="/images/avatar.png"
-            alt="Avatar"
-            width={40}
-            height={40}
-            className="h-10 w-10 rounded-xl object-cover"
+            alt="Tochuan"
+            width={48}
+            height={48}
             priority
+            className="h-12 w-12 rounded-xl object-cover"
           />
         </button>
 
         {/* Navigation */}
-        <nav className="flex gap-10 text-sm">
+        <nav className="flex items-center gap-10 text-sm">
           {navItems.map((item) => (
             <button
               key={item.target}
               onClick={() => scrollToSection(item.target)}
-              className={`transition duration-300 hover:text-white ${
-                active === item.target ? "text-white" : "text-white/55"
+              className={`transition-colors duration-300 hover:text-white ${
+                active === item.target
+                  ? "text-white"
+                  : "text-white/55"
               }`}
             >
               {item.label}
@@ -79,10 +78,10 @@ export default function Navbar() {
           ))}
         </nav>
 
-        {/* Button */}
+        {/* Explore */}
         <button
           onClick={() => scrollToSection("contact")}
-          className="rounded-full bg-white px-6 py-2 text-sm text-black transition duration-300 hover:scale-105"
+          className="rounded-full bg-white px-6 py-2 text-sm font-medium text-black transition duration-300 hover:scale-105 hover:bg-white/90"
         >
           Explore
         </button>

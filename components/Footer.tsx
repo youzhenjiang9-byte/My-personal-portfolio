@@ -1,12 +1,14 @@
+import Image from "next/image";
+
 export default function Footer() {
   return (
     <footer className="bg-black text-white">
       <div className="relative h-[340px] w-full overflow-hidden">
         <img
-  src="/images/footer/footer.png"
-  alt=""
-  className="absolute inset-0 h-full w-full object-cover object-center opacity-75"
-/>
+          src="/images/footer/footer.png"
+          alt=""
+          className="absolute inset-0 h-full w-full object-cover object-center opacity-75"
+        />
 
         <div className="absolute inset-0 bg-black/45" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/20 to-black/70" />
@@ -14,11 +16,18 @@ export default function Footer() {
 
         <div className="relative z-10 mx-auto grid h-full max-w-5xl grid-cols-4 gap-16 pt-16 text-[13px] leading-6">
           <div>
-            <div className="mb-6 flex items-center gap-3">
-              <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-lime-400 text-black">
-                ●
-              </span>
-              <h3 className="text-3xl font-bold tracking-[-0.05em]">L2B.</h3>
+            <div className="mb-6 flex items-center gap-4">
+              <Image
+                src="/images/avatar.png"
+                alt="Tochuan"
+                width={48}
+                height={48}
+                className="h-12 w-12 rounded-xl object-cover"
+              />
+
+              <h3 className="text-3xl font-bold tracking-[-0.05em]">
+                Tochuan.
+              </h3>
             </div>
 
             <p className="max-w-[220px] text-white/75">
