@@ -4,9 +4,9 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const navItems = [
-  { label: "Home", target: "home" },
-  { label: "Work", target: "works" },
+   { label: "Home", target: "home" },
   { label: "About", target: "about" },
+  { label: "Work", target: "works" },
 ];
 
 export default function Navbar() {
