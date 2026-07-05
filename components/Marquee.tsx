@@ -3,24 +3,25 @@
 import { motion } from "framer-motion";
 
 const images = [
+  const images = [
   {
-    src: "/images/marquee/marquee01.png",
+    src: "/images/Marquee/marquee01.png",
     className: "left-[4%] top-[16%] w-[190px]",
   },
   {
-    src: "/images/marquee/marquee02.png",
+    src: "/images/Marquee/marquee02.png",
     className: "right-[18%] top-[18%] w-[350px]",
   },
   {
-    src: "/images/marquee/marquee03.png",
+    src: "/images/Marquee/marquee03.png",
     className: "left-[18%] bottom-[10%] w-[440px]",
   },
   {
-    src: "/images/marquee/marquee04.png",
+    src: "/images/Marquee/marquee04.png",
     className: "right-[5%] bottom-[16%] w-[250px]",
   },
   {
-    src: "/images/marquee/marquee05.png",
+    src: "/images/Marquee/marquee05.png",
     className: "right-[36%] bottom-[7%] w-[220px]",
   },
 ];
